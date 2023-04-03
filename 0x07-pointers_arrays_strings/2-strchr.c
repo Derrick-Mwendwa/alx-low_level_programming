@@ -10,21 +10,14 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int i = 0;
-	int is_found = 0;
 
 	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == c)
-		{
-			is_found = 1;
-			break;
-		}
+			return (s + i);
 
 		i++;
 	}
 
-	if (is_found)
-		return (s + i);
-	else
-		return (NULL);
+	return (NULL);
 }
