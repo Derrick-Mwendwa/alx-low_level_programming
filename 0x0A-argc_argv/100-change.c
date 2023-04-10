@@ -10,23 +10,40 @@
  */
 int main(int argc, char *argv[])
 {
-	size_t i;
-	int cents, coins = 0;
-	int available[] = {25, 10, 5, 2, 1};
+	int ct, n = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	cents = atoi(argv[1]);
+	ct = atoi(argv[1]);
 
-	for (i = 0; i < sizeof(available) / sizeof(available[0]); i++)
+	while (ct > 0)
 	{
-		coins += cents / available[i];
-		cents %= available[i];
+		n++;
+		if ((ct - 25) >= 0)
+		{
+			ct -= 25;
+			continue;
+		}
+		if ((ct - 10) >= 0)
+		{
+			ct -= 10;
+			continue;
+		}
+		if ((ct - 5) >= 0)
+		{
+			ct -= 5;
+			continue;
+		}
+		if ((ct - 2) >= 0)
+		{
+			ct -= 2;
+			continue;
+		}
+		ct--;
 	}
-
-	printf("%d\n", coins);
+	printf("%d\n", n);
 	return (0);
 }
