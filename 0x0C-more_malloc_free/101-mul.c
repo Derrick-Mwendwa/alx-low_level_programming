@@ -47,9 +47,9 @@ int _atoi(const char *st)
 /**
  * print_int - prints an integer
  * @n: int
+ *
  * Return: void
  */
-
 void print_int(unsigned long int n)
 {
 	unsigned long int divisor = 1;
@@ -69,9 +69,9 @@ void print_int(unsigned long int n)
  * main - returns the product of two positive numbers
  * @argc: number of arguments
  * @argv: arguments
+ *
  * Return: 0
  */
-
 int main(int argc, char const *argv[])
 {
 	(void)argc;
