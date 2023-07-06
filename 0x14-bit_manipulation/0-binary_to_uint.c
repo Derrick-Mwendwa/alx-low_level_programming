@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * binary_to_uint - converts binary to unsigned int
  * @b: pointer to string of 0 and 1s
@@ -19,6 +21,10 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[length] != '0' && b[length] != '1')
 			return (0);
+
+		if (b == NULL)
+			return (0);
+
 		n += (b[length] - '0') * x;
 		x *= 2;
 	}
