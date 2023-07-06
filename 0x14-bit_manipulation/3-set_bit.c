@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * set_bit - sets value of bit at index to 1
  * @n: pointer to bit
